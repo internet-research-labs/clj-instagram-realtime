@@ -14,8 +14,4 @@
              *client-secret* (:client-secret ~client-info)
              *callback-url*  (:callback-url  ~client-info)
              *redirect-uri*  (:redirect-uri  ~client-info)]
-     (println "sure" *client-id*)
-     (println "sure" *client-secret*)
-     (println "sure" *callback-url*)
-     (println "sure" *redirect-uri*)
      ~@body))

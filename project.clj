@@ -8,4 +8,6 @@
                  [compojure "1.3.3"]
                  [clj-http "1.1.0"]
                  [ring/ring-mock "0.2.0"]
-                 [ring/ring-codec "1.0.0"]])
+                 [ring/ring-codec "1.0.0"]
+                 [org.clojure/core.async "0.1.346.0-17112a-alpha"]]
+  :dev-dependencies [[clj-http-fake "1.0.1"]])
