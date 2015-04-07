@@ -16,33 +16,33 @@
                               :callback-url   "sure"}}))
 
 
-(defroutes yer-roues
-  ;; ...
-  nil)
+; (defroutes yer-roues
+;   ;; ...
+;   nil)
 
-(def 
-
-
-(let [[app channel] (make-stream)
+; (def 
 
 
-(def app
-  (-> yer-routes
-      (instagram-thing)))
+; (let [[app channel] (make-stream)
+
+
+; (def app
+;   (-> yer-routes
+;       (instagram-thing)))
 
 
 
-(instagram-client-info
-  {:client-id      "597d57d253d446a89bda86c03b129326"
-   :client-secret  "38a6ea19033641d987385bf8de52d16a"
-   :website-url    "http://irl.dating/"
-   :redirect-uri   "http://irl.dating/igredirect"
-   :callback-url   "http://irl.dating/vv/e"})
+; (instagram-client-info
+;   {:client-id      "597d57d253d446a89bda86c03b129326"
+;    :client-secret  "38a6ea19033641d987385bf8de52d16a"
+;    :website-url    "http://irl.dating/"
+;    :redirect-uri   "http://irl.dating/igredirect"
+;    :callback-url   "http://irl.dating/vv/e"})
 
-(with-instagram client-info
-  (let [geo-channel (subscribe/geo :lng 10 :lat :20 :radius 100)
-        tag-channel (subscribe/tag :tag "yolo")]
-    ))
+; (with-instagram client-info
+;   (let [geo-channel (subscribe/geo :lng 10 :lat :20 :radius 100)
+;         tag-channel (subscribe/tag :tag "yolo")]
+;     ))
 
 
 ; (instagram-client-info

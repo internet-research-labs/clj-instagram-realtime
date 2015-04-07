@@ -11,10 +11,20 @@
     * hub.challenge
     * hub.verify_token
     * hub.calback_url"
-  [request]
-  (let [query-string (:query-string request)
-        encoding     (or (:encoding request) "UTF-8")
+  [req]
+  (let [query-string (:query-string req)
+        encoding     (or (:encoding req) "UTF-8")
         params       (parse-params query-string encoding)]
     {:status  200
      :body    (get params "hub.challenge" "")
      :header  {"Content-Type" "text/plain"}}))
+
+
+;; @TODO: Look into add-watch/remove-watch to trigger atom events
+(defn handle-new-media
+  "Returns an immediate response, and fires off events."
+  [req]
+  (println (:body req))
+  {:status 200
+   :body   "🍕 "})
+

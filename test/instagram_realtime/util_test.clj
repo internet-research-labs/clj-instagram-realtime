@@ -8,6 +8,6 @@
     (testing "should not blow up completely"
       (let [obj {:client-id "swag"}]
         (with-instagram obj
-          (println "~~~" *client-id* "~~~")
+          ;; x_x
           )))))
 

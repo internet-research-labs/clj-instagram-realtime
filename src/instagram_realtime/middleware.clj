@@ -20,5 +20,10 @@
   (let [callback-path (parse-path callback-url)]
     (fn [request]
       (if (= callback-path (path-info request))
-        (responses/echo-hub-challenge request)
+        ; If callback path is correct, then branch based on request-method
+        (case (:request-method request)
+          :get  (responses/echo-hub-challenge request)
+          :post (responses/handle-new-media request)
+          (handler request))
+        ; Otherwise
         (handler request)))))
